@@ -1,0 +1,168 @@
+{
+  "Homepage": {
+    "super_slider_widget_sci1-3": {
+      "number": "4",
+      "categories": "all",
+      "author": "on",
+      "date": "on"
+    },
+    "ticker_widget_sci1-3": {
+      "title": "Breaking News",
+      "number": "10",
+      "categories": "all",
+      "widget_size": "fullwidth-ticker",
+      "sign_before_link": "+",
+      "duration": "forever",
+      "post_type_pop": "latest"
+    },
+    "sci1_newsroll_sci1-5": {
+      "title": "Newsroll",
+      "number": "20",
+      "offset": "0",
+      "categories": "all",
+      "min_height": "two-parts-height"
+    },
+    "img_featured_category_sci1-32": {
+      "title": "",
+      "number": "3",
+      "offset": "0",
+      "categories": "all",
+      "review": null,
+      "widget_size": "three-parts",
+      "author": null,
+      "date": null,
+      "cat_show": "on",
+      "display_text": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "huge_img_featured_category_sci1-25": {
+      "title": "",
+      "number": "1",
+      "offset": "3",
+      "categories": "all",
+      "review": null,
+      "widget_size": "two-parts",
+      "author": "on",
+      "date": "on",
+      "cat_show": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "img_featured_category_sci1-33": {
+      "title": "",
+      "number": "1",
+      "offset": "4",
+      "categories": "all",
+      "review": null,
+      "widget_size": "one-part",
+      "author": null,
+      "date": null,
+      "cat_show": "on",
+      "display_text": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "blog_category_sci1-4": {
+      "title": "",
+      "number": "4",
+      "offset": "5",
+      "excerptnumber": "44",
+      "categories": "all",
+      "author": null,
+      "date": null,
+      "widget_size": "four-parts",
+      "cat_show": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "slider_widget_sci1-6": {
+      "title": "",
+      "number": "3",
+      "categories": "all",
+      "slider_control": null,
+      "widget_size": "four-parts",
+      "subtitle": "on"
+    },
+    "img_featured_category_sci1-34": {
+      "title": "",
+      "number": "1",
+      "offset": "9",
+      "categories": "all",
+      "review": null,
+      "widget_size": "one-part",
+      "author": null,
+      "date": null,
+      "cat_show": "on",
+      "display_text": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "huge_img_featured_category_sci1-26": {
+      "title": "",
+      "number": "1",
+      "offset": "10",
+      "categories": "all",
+      "review": null,
+      "widget_size": "two-parts",
+      "author": "on",
+      "date": "on",
+      "cat_show": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "img_featured_category_sci1-35": {
+      "title": "",
+      "number": "1",
+      "offset": "11",
+      "categories": "all",
+      "review": null,
+      "widget_size": "one-part",
+      "author": null,
+      "date": null,
+      "cat_show": "on",
+      "display_text": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "blog_category_sci1-5": {
+      "title": "",
+      "number": "4",
+      "offset": "12",
+      "excerptnumber": "44",
+      "categories": "all",
+      "author": null,
+      "date": null,
+      "widget_size": "four-parts",
+      "cat_show": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "huge_img_featured_category_sci1-27": {
+      "title": "",
+      "number": "2",
+      "offset": "16",
+      "categories": "all",
+      "review": null,
+      "widget_size": "four-parts",
+      "author": "on",
+      "date": "on",
+      "cat_show": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "img_featured_category_sci1-36": {
+      "title": "",
+      "number": "4",
+      "offset": "0",
+      "categories": "all",
+      "review": null,
+      "widget_size": "four-parts",
+      "author": null,
+      "date": null,
+      "cat_show": "on",
+      "display_text": "on",
+      "navigation": "on",
+      "auto_load": null
+    }
+  }}
