@@ -48,3 +48,26 @@ License URI:
   color: #656c7a;
   float: none;
 }
+/* HomePage Blogroll*/
+.home .blogroll2 .blog-post-image {
+  width: 136px;
+  max-height: 78px;
+  padding-right: 0px;
+}
+.home .blogroll2.blog-category {
+  max-width: 625px;
+}
+.home .blogroll2.blog-category .category-icon {
+  display: none;
+}
+.home .blogroll2 .blogwrap {
+  width: -webkit-calc( 100% - 136px );
+  width: calc( 100% - 136px );
+  padding-left: 22px;
+  line-height: 21px;
+  min-height: 90px;
+  margin-bottom: 12px;
+}
+.home .blogroll2 .blog-post-title-box {
+  padding-top: 0px;
+}

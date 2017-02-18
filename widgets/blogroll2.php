@@ -75,7 +75,7 @@ class blog_category_two_sci1 extends WP_Widget {
 			<div class="blog-post-image">
 				<?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail('smallimagefeatured'); ?>
+				<?php the_post_thumbnail('thumbnail'); ?>
 				</a>
 				<?php } ?>
 			</div>

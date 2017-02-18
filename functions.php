@@ -47,7 +47,7 @@ add_action ('wp_head', 'google_analytics');
 //Theme Javascript Files
 
 function sci1_scripts() {
-		wp_enqueue_style( 'styles', get_stylesheet_uri(),array(),'201729010127' );
+		wp_enqueue_style( 'styles', get_stylesheet_uri(),array(),filemtime(get_stylesheet_directory().'/style.css') );
 	if (is_home() || is_page_template('alternative homepage.php') || is_front_page()) {
 		wp_enqueue_script('jquery-masonry');
 	}
