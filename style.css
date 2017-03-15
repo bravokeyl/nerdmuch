@@ -11,11 +11,10 @@ License:
 License URI:
 */
 
-
+@import url('css/main-style.css');
 @import url('css/header.css');
 @import url('css/widgets.css');
 @import url('css/effects-animations.css');
-@import url('css/main-style.css');
 @import url('css/responsive.css') (max-width:1850px);
 
 /* Images used in Css */
