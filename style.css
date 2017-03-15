@@ -2,7 +2,7 @@
 Theme Name: Science Magazine
 Description: Science Magazine profesional responsive news theme.
 Author: StepFox
-Author URI: http://stepfox.net/
+Author URI: http://stepfox.net/check
 Theme URI: http://stepfox.net/science/
 Version: 1.0
 Tags: one-column, two-columns, three-columns, four-columns, custom-colors, custom-menu, featured-images, post-formats, theme-options
@@ -92,3 +92,11 @@ License URI:
     display: none;
   }
 }
+
+/* From Simple Custom CSS */
+.optin{max-width:750px;background:#151515;padding:20px;}.optin h3{font-size:42px;text-align:center;padding-bottom:0px;color:#84c705!important;}.optin p{margin-bottom:0!important;text-align:center;font-size:24px;color:#fff!important;font-weight:normal!important;}.form-container{width:90%;overflow:hidden;text-align:center;margin:0 auto;padding:25px 0 40px;}.form-cell-text{width:70%;float:left;}.slide-title,.slide-excerpt,.slide-date,.top-menu-posts li,.auto-load{opacity:1!important;}input#mc4wp_email{font-size:18px!important;line-height:40px!important;max-width:100%!important;width:100%!important;}input#mc4wp_submit{background:#84c705 none repeat scroll 0 0!important;border:1px solid #84c705!important;border-radius:0!important;font-size:18px!important;font-weight:normal!important;line-height:40px!important;width:100%!important;}.form-cell-submit{width:30%;float:left;}.bw{-webkit-transition:all 1s ease;-moz-transition:all 1s ease;-o-transition:all 1s ease;-ms-transition:all 1s ease;transition:all 1s ease;}.bw:hover{-webkit-filter:grayscale(100%);}
+
+/* Hide Widget CSS */
+@media (max-width: 768px){.widget-no-mobile{display:none!important;}}@media (min-width: 769px){.widget-no-desktop{display:none!important;}}
+
+/* End */
