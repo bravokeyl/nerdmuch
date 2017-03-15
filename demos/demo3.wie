@@ -1,0 +1,194 @@
+{  "Homepage": {
+    "slider_widget_sci1-7": {
+      "title": "",
+      "number": "3",
+      "categories": "all",
+      "slider_control": null,
+      "widget_size": "three-parts",
+      "subtitle": "on"
+    },
+    "small_img_category_sci1-2": {
+      "title": "",
+      "number": "2",
+      "offset": "23",
+      "categories": "all",
+      "review": null,
+      "widget_size": "one-part",
+      "author": "on"
+    },
+    "blog_category_sci1-6": {
+      "title": "",
+      "number": "1",
+      "offset": "0",
+      "excerptnumber": "60",
+      "categories": "all",
+      "author": null,
+      "date": null,
+      "widget_size": "one-part",
+      "cat_show": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "thumbnails_sci1-16": {
+      "title": "",
+      "number": "8",
+      "offset": "1",
+      "categories": "all",
+      "widget_size": "two-parts",
+      "date": "on",
+      "cat_show": "on"
+    },
+    "ad_widget_sizes_sci1-16": {
+      "title": "",
+      "text": "",
+      "link": "",
+      "image": "http://stephog.ddns.net/wp-content/themes/science-magazine/images/300x600.jpg",
+      "widget_size": "one-part"
+    },
+    "custom_title_widget_sizes_sci1-5": {
+      "title": "Editor's Choices",
+      "subtitle": "Because not everything you read on the internet is true",
+      "link": "",
+      "right_text": "More Editor's ➤",
+      "widget_size": "three-parts"
+    },
+    "img_featured_category_sci1-37": {
+      "title": "",
+      "number": "3",
+      "offset": "9",
+      "categories": "all",
+      "review": null,
+      "widget_size": "three-parts",
+      "author": null,
+      "date": null,
+      "cat_show": "on",
+      "display_text": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "sci1_newsroll_sci1-6": {
+      "title": "Newsroll",
+      "number": "18",
+      "offset": "0",
+      "categories": "all",
+      "min_height": "one-part-height"
+    },
+    "custom_title_widget_sizes_sci1-6": {
+      "title": "Editor's Choices",
+      "subtitle": "Because not everything you read on the internet is true",
+      "link": "",
+      "right_text": "More Editor's ➤",
+      "widget_size": "three-parts"
+    },
+    "blog_category_sci1-7": {
+      "title": "",
+      "number": "1",
+      "offset": "12",
+      "excerptnumber": "60",
+      "categories": "all",
+      "author": null,
+      "date": null,
+      "widget_size": "one-part",
+      "cat_show": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "thumbnails_sci1-17": {
+      "title": "",
+      "number": "8",
+      "offset": "13",
+      "categories": "all",
+      "widget_size": "two-parts",
+      "date": "on",
+      "cat_show": "on"
+    },
+    "shortcode_widget_sizes_sci1-2": {
+      "title": "",
+      "text": "",
+      "widget_size": "four-parts",
+      "vertical_margin": "0"
+    },
+    "custom_title_widget_sizes_sci1-7": {
+      "title": "Editor's Choices",
+      "subtitle": "Because not everything you read on the internet is true",
+      "link": "",
+      "right_text": "More Editor's ➤",
+      "widget_size": "three-parts"
+    },
+    "img_featured_category_sci1-38": {
+      "title": "",
+      "number": "3",
+      "offset": "14",
+      "categories": "all",
+      "review": null,
+      "widget_size": "three-parts",
+      "author": null,
+      "date": null,
+      "cat_show": "on",
+      "display_text": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "carousel_widget_sci1-2": {
+      "title": "",
+      "number": "6",
+      "offset": "0",
+      "categories": "all",
+      "widget_size": "one-part",
+      "author": "on"
+    },
+    "trending_widget_sci1-14": {
+      "title": "Trending posts",
+      "duration": "forever",
+      "number": "12"
+    },
+    "custom_title_widget_sizes_sci1-8": {
+      "title": "Editor's Choices",
+      "subtitle": "Because not everything you read on the internet is true",
+      "link": "",
+      "right_text": "More Editor's ➤",
+      "widget_size": "three-parts"
+    },
+    "blog_category_sci1-8": {
+      "title": "",
+      "number": "1",
+      "offset": "17",
+      "excerptnumber": "60",
+      "categories": "all",
+      "author": null,
+      "date": null,
+      "widget_size": "one-part",
+      "cat_show": "on",
+      "navigation": null,
+      "auto_load": null
+    },
+    "thumbnails_sci1-18": {
+      "title": "",
+      "number": "8",
+      "offset": "12",
+      "categories": "all",
+      "widget_size": "two-parts",
+      "date": "on",
+      "cat_show": "on"
+    },
+    "custom_title_widget_sizes_sci1-9": {
+      "title": "Editor's Choices",
+      "subtitle": "Because not everything you read on the internet is true",
+      "link": "",
+      "right_text": "More Editor's ➤",
+      "widget_size": "three-parts"
+    },
+    "blog_category_sci1-9": {
+      "title": "",
+      "number": "3",
+      "offset": "0",
+      "excerptnumber": "44",
+      "categories": "all",
+      "author": null,
+      "date": null,
+      "widget_size": "three-parts",
+      "cat_show": "on",
+      "navigation": "on",
+      "auto_load": null
+    }
+  }}

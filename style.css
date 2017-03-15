@@ -1,0 +1,94 @@
+/*
+Theme Name: Science Magazine
+Description: Science Magazine profesional responsive news theme.
+Author: StepFox
+Author URI: http://stepfox.net/
+Theme URI: http://stepfox.net/science/
+Version: 1.0
+Tags: one-column, two-columns, three-columns, four-columns, custom-colors, custom-menu, featured-images, post-formats, theme-options
+Text Domain: Science Magazine
+License:
+License URI:
+*/
+
+
+@import url('css/header.css');
+@import url('css/widgets.css');
+@import url('css/effects-animations.css');
+@import url('css/main-style.css');
+@import url('css/responsive.css') (max-width:1850px);
+
+/* Images used in Css */
+
+.super-slider:hover .flex-next, .flexslider:hover .flex-next, .carousel:hover .flex-next, .post-page-gallery-thumbnails:hover .flex-next, .tv-carousel:hover .flex-next, .wide-slider:hover .flex-next, .tv-ajax-carousel:hover .flex-next{background: url(images/sci1-arrows-carousel.png) no-repeat -55px 0px;opacity: 1; right: 0;}
+.super-slider:hover .flex-prev, .flexslider:hover .flex-prev, .carousel:hover .flex-prev, .post-page-gallery-thumbnails:hover .flex-prev, .tv-carousel:hover .flex-prev, .wide-slider:hover .flex-prev, .tv-ajax-carousel:hover .flex-prev{background: url(images/sci1-arrows-carousel.png) no-repeat 34px 0px;opacity: 1; left: 0;}
+.ticker-left { width: 20px;height: 13px;display: block;background: url(images/arrows.png) no-repeat -13px -12px;cursor: pointer;margin: 10px 0;float:right; }
+.ticker-right {width: 20px;height: 13px;display: block;background: url(images/arrows.png) no-repeat 4px -12px;cursor: pointer;margin: 10px 0;float:left;}
+.super-slider:hover .flex-next{background: url(images/sci1-arrows-slider.png) no-repeat -55px 0px;opacity: 1; right: 0;}
+.super-slider:hover .flex-prev{background: url(images/sci1-arrows-slider.png) no-repeat 30px 0px;opacity: 1; left: 0;}
+
+/* Button Shortcodes */
+.sc-button:hover,a.button:hover{text-decoration:none}.button,.sc-button{font-family:"Open Sans",Arial,sans-serif;font-weight:600;line-height:1.6;background:#b93434;color:#fff;display:inline-block;padding:7px 21px}.button.smaller{font-size:12px;padding:2px 7px}.post-content .sc-button,.post-content .sc-button:hover{color:#fff}.sc-button:hover{background:#161616!important}.sc-button-small{font-size:14px}.sc-button-medium{font-size:16px}.sc-button-large{font-size:18px}.sc-button-maroon{background:#ab4b4b}.sc-button-yellow{background:#ffdc00}.sc-button-blue{background:#2a3c4c}.sc-button-purple{background:#ab4b93}.sc-button-brown{background:#ab6b4b}
+#post-content a.sc-button,#post-content a.sc-button:hover { color: #fff;}
+
+/* News Roll */
+.newsroll-posts-text .newsroll-posts-title a {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 700;
+  font-family: inherit;
+}
+.newsroll-posts-text .newsroll-date {
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.25;
+  font-family: 'Open Sans';
+  text-transform: initial;
+  color: #656c7a;
+  float: none;
+}
+/* HomePage Blogroll*/
+.home .blogroll2 .blog-post-image {
+  width: 136px;
+  max-height: 78px;
+  padding-right: 0px;
+}
+.home .blogroll2.blog-category {
+  max-width: 625px;
+}
+.home .blogroll2.blog-category .category-icon {
+  display: none;
+}
+.home .blogroll2 .blogwrap {
+  width: -webkit-calc( 100% - 136px );
+  width: calc( 100% - 136px );
+  padding-left: 22px;
+  line-height: 21px;
+  min-height: 90px;
+  margin-bottom: 12px;
+}
+.home .blogroll2 .blog-post-title-box {
+  padding-top: 0px;
+}
+.home .blogroll2 .blog-post-content {
+  font-size: 14px;
+}
+.home .blogroll2 .blog-post-title h2 {
+  font-size: 16px;
+}
+.home .two-parts .blog-category.blogroll2 li {
+  border-bottom: 1px solid #eee;
+}
+
+@media only screen and (max-width: 767px) {
+  .archive .blog-category.popular-slider-control,
+  .home .home-widget.one-part.bk-one-fea-widget,
+  .home .home-widget.four-parts.bk-four-fea-widget,
+  .home .blog-category.blogroll2 .blog-post-content {
+    display: none;
+  }
+  .archive .home-widget.four-parts h3 .widget-title {
+    display: none;
+  }
+}
