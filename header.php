@@ -4,8 +4,10 @@
 **/
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes();?>><head>
-<script>window.mrf={host:"b.marfeel.com",dt:3},function(e,t,o,a,i,r,n){function d(){l&&(e.cookie="fromt=yes;path=/;expires="+new Date(Date.now()+18e5).toGMTString(),o.reload())}var l=!/marfeelgarda=no|fromt=yes/i.test(r+";"+i);if((/(ipad.*?OS )(?!1_|2_|3_|4_|X)|mozilla.*android (?!(1|2|3)\.)[0-9](?!.*mobile)|\bSilk\b/i.test(a)&&2&n.dt||/(ip(hone|od).*?OS )(?!1_|2_|3_|4_|X)|mozilla.*android (?!(1|2|3)\.)[0-9].*mobile|bb10/i.test(a)&&1&n.dt||/marfeelgarda=off/i.test(r))&&t===t.top){l&&e.write('<plaintext style="display:none">');var s="script",m=setTimeout(d,1e4),c=e.createElement(s),f=e.getElementsByTagName(s)[0];c.src="//bc.marfeel.com/statics/marfeel/gardac.js",c.onerror=d,c.onload=function(){clearTimeout(m)},f.parentNode.insertBefore(c,f)}}(document,window,location,navigator.userAgent,document.cookie,location.search,window.mrf);</script>
+<html <?php language_attributes();?>>
+<head>
+<!--analytics-->
+
 <meta property="fb:pages" content="1423694334614664" />
 <meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 <!--viewport-->
@@ -20,6 +22,7 @@
 <link rel="alternate" type="application/atom+xml" title="Atom" href="<?php bloginfo('atom_url'); ?>" />
 <!--pingback-->
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
 
 <!--Facebook Open Graph-->
 <?php if ( defined('WPSEO_VERSION') ) {}else{?>
@@ -37,6 +40,7 @@
 <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
 <?php } ?>
 <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>

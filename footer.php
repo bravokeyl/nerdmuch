@@ -69,7 +69,11 @@
 	<!--copyright-->
 </footer>
 <!--footer-->
+  <script type="text/javascript">
+   jQuery(window).load(function(){
+     jQuery('.slider_fx1').flexslider({
+        slideshow: true,  
+        });
+    <script>
 <?php wp_footer(); ?>
-<script type="text/javascript">ggv2id='a47ff7de';</script>
-<script type="text/javascript" src="//g2.gumgum.com/javascripts/ggv2.js"></script>
 </body></html>

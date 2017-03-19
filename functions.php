@@ -19,35 +19,12 @@ include( get_template_directory().'/inc/share-functions.php' );
 include( get_template_directory().'/inc/ajax-search.php' );
 include( get_template_directory().'/inc/latest-posts-button.php' );
 
-//Google Universal Analytics
-function google_analytics() { ?>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-62270180-1', 'auto');
-  <?php if (is_singular('post')) {
-    $this_post = get_queried_object();
-    $author_name = get_the_author_meta('display_name', $this_post->post_author); ?>
-    ga('set', 'dimension1', '<?php echo $author_name ?>');
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'Author',
-      eventAction: 'view',
-      eventLabel: '<?php echo $author_name ?>'
-      });
-  <?php } ?>
-  ga('send', 'pageview');
-</script>
-<?php }
-add_action ('wp_head', 'google_analytics');
 
 //Theme Javascript Files
 
 function sci1_scripts() {
-		wp_enqueue_style( 'styles', get_stylesheet_uri(),array(),filemtime(get_stylesheet_directory().'/style.css') );
+		// wp_enqueue_style( 'style', get_stylesheet_uri(),array(),'' );
+		wp_enqueue_style( 'bk-style', get_template_directory_uri().'/css/app.css',array(), "1.0.3" );
 	if (is_home() || is_page_template('alternative homepage.php') || is_front_page()) {
 		wp_enqueue_script('jquery-masonry');
 	}
@@ -80,10 +57,6 @@ return str_replace( ' rel', ' media="print" rel', $tag );
 }
 */
 
-// Title
-
-add_theme_support( 'title-tag' );
-
 function same_title_tag(){
 	if (is_home() ||  is_front_page()) {
     	return get_bloginfo( 'name' ).' &ndash; '. get_bloginfo('description');
@@ -93,38 +66,41 @@ add_filter('pre_get_document_title', 'same_title_tag');
 
 
 
-// Add RSS links to <head> section
 
-add_theme_support( 'automatic-feed-links' );
-
-//Content Width
-
-if ( ! isset( $content_width ) ){ $content_width = ((get_option('sci1_site_width') - 20) * 0.75) - 20 - 84; }
-
-//Background enable
-
-$args = array(
-	'default-color' => 'ebebeb',
-	'default-image' => get_template_directory_uri() . '/images/background.jpg',
-);
-add_theme_support( 'custom-background', $args );
-
-//Header-image enable
-
-$args = array(
-	'width'         => 294,
-	'height'        => 115,
-	'default-image' => get_template_directory_uri() . '/images/logo.png',
-	'header-text'   => false,
-	'random-default' => false,
-
-);
-add_theme_support( 'custom-header', $args );
 
 //Translation
 
 function sci1_mag_lang_setup(){
     load_theme_textdomain('science-magazine', get_template_directory() . '/lang');
+		// Add RSS links to <head> section
+
+		add_theme_support( 'automatic-feed-links' );
+
+		//Content Width
+
+		if ( ! isset( $content_width ) ){ $content_width = ((get_option('sci1_site_width') - 20) * 0.75) - 20 - 84; }
+
+		//Background enable
+
+		$args = array(
+			'default-color' => 'ebebeb',
+			'default-image' => get_template_directory_uri() . '/images/background.jpg',
+		);
+		add_theme_support( 'custom-background', $args );
+
+		//Header-image enable
+
+		$args = array(
+			'width'         => 294,
+			'height'        => 115,
+			'default-image' => get_template_directory_uri() . '/images/logo.png',
+			'header-text'   => false,
+			'random-default' => false,
+
+		);
+
+		add_theme_support( 'custom-header', $args );
+		add_theme_support( 'title-tag' );
 }
 add_action('after_setup_theme', 'sci1_mag_lang_setup');
 
@@ -135,9 +111,7 @@ function sci1_editor_styles() {
 }
 add_action( 'init', 'sci1_editor_styles' );
 
-//Post Formats
 
-add_theme_support( 'post-formats', array('video', 'aside', 'gallery', 'image'));
 
 //Rename Post Format
 
@@ -243,23 +217,26 @@ if ( function_exists('register_sidebar') ) {
 
 // Dynamic Widget area for alternative homepage
 function alternative_homepage(){
-if ( function_exists('register_sidebar') ) {
-	$pageposts = get_posts(array('posts_per_page' => -1, 'post_type' => 'page', 'post_status' => 'publish', 'meta_query' => array(array('key' => '_wp_page_template', 'value' => 'alternative homepage.php')),));
-	foreach ( $pageposts as $q ){
-	$id = 'sidebar-'.esc_html($q->ID);
-	$page_title = 'page-'.esc_html($q->post_title);
-	if ($page_title && function_exists('register_sidebar')){
-	register_sidebar(array(
-		'id' => $id,
-		'name' => $page_title ,
-		'before_widget' => '<div class="home-widget"><div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<div class="widget-title">',
-		'after_title' => '</div>',
-	));
+	//Post Formats
+	add_theme_support( 'post-formats', array('video', 'aside', 'gallery', 'image'));
+
+	if ( function_exists('register_sidebar') ) {
+		$pageposts = get_posts(array('posts_per_page' => -1, 'post_type' => 'page', 'post_status' => 'publish', 'meta_query' => array(array('key' => '_wp_page_template', 'value' => 'alternative homepage.php')),));
+		foreach ( $pageposts as $q ){
+		$id = 'sidebar-'.esc_html($q->ID);
+		$page_title = 'page-'.esc_html($q->post_title);
+		if ($page_title && function_exists('register_sidebar')){
+		register_sidebar(array(
+			'id' => $id,
+			'name' => $page_title ,
+			'before_widget' => '<div class="home-widget"><div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<div class="widget-title">',
+			'after_title' => '</div>',
+		));
+		}
+		}
 	}
-	}
-}
 }
 add_action( 'after_setup_theme', 'alternative_homepage' );
 
@@ -442,7 +419,26 @@ function loginpage_custom_link() {
 }
 add_filter('login_headerurl','loginpage_custom_link');
 
+//atom
+function hatom_mod_post_content ($content) {
+  if ( in_the_loop() && !is_page() ) {
+    $content = '<span class="entry-content">'.$content.'</span>';
+  }
+  return $content;
+}
+add_filter( 'the_content', 'hatom_mod_post_content');
 
+//add hatom data
+function add_suf_hatom_data($content) {
+    $t = get_the_modified_time('F jS, Y');
+    $author = get_the_author();
+    $title = get_the_title();
+if (is_home() || is_singular() || is_archive() ) {
+        $content .= '<div class="hatom-extra" style="display:none;visibility:hidden;"><span class="entry-title">'.$title.'</span> was last modified: <span class="updated"> '.$t.'</span> by <span class="author vcard"><span class="fn">'.$author.'</span></span></div>';
+    }
+    return $content;
+    }
+add_filter('the_content', 'add_suf_hatom_data');
 
 //woocommerce
 add_theme_support( 'woocommerce' );
@@ -482,6 +478,16 @@ add_filter('loop_shop_per_page', create_function('$cols', 'return 16;') );
 	define ( 'BP_AVATAR_FULL_WIDTH', '250' );
 	define ( 'BP_AVATAR_FULL_HEIGHT', '250' );
 
+// this function goes in your functions.php file and requires google.js created in another gist
+function google_load_file() {
+		$this_post = get_queried_object();
+		$author_id = $this_post->post_author;
+		$name = get_the_author_meta('display_name', $author_id);
+
+		wp_enqueue_script( 'author-tracking', get_stylesheet_directory_uri() . '/js/google.js', array(), '1.0.0', true );
+		wp_localize_script( 'author-tracking', 'author', array( 'name' => $name ) );
+}
+add_action( 'wp_enqueue_scripts', 'google_load_file' );
 
 //search image
 function get_attachment_id_from_src ($image) {
@@ -491,5 +497,19 @@ function get_attachment_id_from_src ($image) {
 		return $id;
 }
 
+//jquery -> footer
+//add_action('wp_enqueue_scripts', 'true_peremeshhaem_jquery_v_futer');
+// function true_peremeshhaem_jquery_v_futer() {
+//         wp_deregister_script('jquery');
+//         wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, null, true);
+//         wp_enqueue_script('jquery');
+// }
 
-?>
+add_action( 'wp_enqueue_scripts', 'bk_optimize_scripts', 99 );
+function bk_optimize_scripts() {
+	if(is_front_page()){
+		wp_dequeue_style( 'contact-form-7' );
+	}
+	wp_dequeue_style( 'custom-404-pro' );
+	wp_dequeue_style( 'hide-widgets-css' );
+}
