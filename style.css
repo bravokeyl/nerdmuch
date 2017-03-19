@@ -80,3 +80,15 @@ License URI:
 .home .two-parts .blog-category.blogroll2 li {
   border-bottom: 1px solid #eee;
 }
+
+@media only screen and (max-width: 767px) {
+  .archive .blog-category.popular-slider-control,
+  .home .home-widget.one-part.bk-one-fea-widget,
+  .home .home-widget.four-parts.bk-four-fea-widget,
+  .home .blog-category.blogroll2 .blog-post-content {
+    display: none;
+  }
+  .archive .home-widget.four-parts h3 .widget-title {
+    display: none;
+  }
+}
