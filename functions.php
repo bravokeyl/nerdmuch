@@ -23,7 +23,8 @@ include( get_template_directory().'/inc/latest-posts-button.php' );
 //Theme Javascript Files
 
 function sci1_scripts() {
-		wp_enqueue_style( 'styles', get_stylesheet_uri(),array(),filemtime(get_stylesheet_directory().'/style.css') );
+		// wp_enqueue_style( 'style', get_stylesheet_uri(),array(),'' );
+		wp_enqueue_style( 'bk-style', get_template_directory_uri().'/css/app.css',array(), "1.0.3" );
 	if (is_home() || is_page_template('alternative homepage.php') || is_front_page()) {
 		wp_enqueue_script('jquery-masonry');
 	}
@@ -56,10 +57,6 @@ return str_replace( ' rel', ' media="print" rel', $tag );
 }
 */
 
-// Title
-
-add_theme_support( 'title-tag' );
-
 function same_title_tag(){
 	if (is_home() ||  is_front_page()) {
     	return get_bloginfo( 'name' ).' &ndash; '. get_bloginfo('description');
@@ -69,38 +66,41 @@ add_filter('pre_get_document_title', 'same_title_tag');
 
 
 
-// Add RSS links to <head> section
 
-add_theme_support( 'automatic-feed-links' );
-
-//Content Width
-
-if ( ! isset( $content_width ) ){ $content_width = ((get_option('sci1_site_width') - 20) * 0.75) - 20 - 84; }
-
-//Background enable
-
-$args = array(
-	'default-color' => 'ebebeb',
-	'default-image' => get_template_directory_uri() . '/images/background.jpg',
-);
-add_theme_support( 'custom-background', $args );
-
-//Header-image enable
-
-$args = array(
-	'width'         => 294,
-	'height'        => 115,
-	'default-image' => get_template_directory_uri() . '/images/logo.png',
-	'header-text'   => false,
-	'random-default' => false,
-
-);
-add_theme_support( 'custom-header', $args );
 
 //Translation
 
 function sci1_mag_lang_setup(){
     load_theme_textdomain('science-magazine', get_template_directory() . '/lang');
+		// Add RSS links to <head> section
+
+		add_theme_support( 'automatic-feed-links' );
+
+		//Content Width
+
+		if ( ! isset( $content_width ) ){ $content_width = ((get_option('sci1_site_width') - 20) * 0.75) - 20 - 84; }
+
+		//Background enable
+
+		$args = array(
+			'default-color' => 'ebebeb',
+			'default-image' => get_template_directory_uri() . '/images/background.jpg',
+		);
+		add_theme_support( 'custom-background', $args );
+
+		//Header-image enable
+
+		$args = array(
+			'width'         => 294,
+			'height'        => 115,
+			'default-image' => get_template_directory_uri() . '/images/logo.png',
+			'header-text'   => false,
+			'random-default' => false,
+
+		);
+
+		add_theme_support( 'custom-header', $args );
+		add_theme_support( 'title-tag' );
 }
 add_action('after_setup_theme', 'sci1_mag_lang_setup');
 
@@ -111,9 +111,7 @@ function sci1_editor_styles() {
 }
 add_action( 'init', 'sci1_editor_styles' );
 
-//Post Formats
 
-add_theme_support( 'post-formats', array('video', 'aside', 'gallery', 'image'));
 
 //Rename Post Format
 
@@ -219,23 +217,26 @@ if ( function_exists('register_sidebar') ) {
 
 // Dynamic Widget area for alternative homepage
 function alternative_homepage(){
-if ( function_exists('register_sidebar') ) {
-	$pageposts = get_posts(array('posts_per_page' => -1, 'post_type' => 'page', 'post_status' => 'publish', 'meta_query' => array(array('key' => '_wp_page_template', 'value' => 'alternative homepage.php')),));
-	foreach ( $pageposts as $q ){
-	$id = 'sidebar-'.esc_html($q->ID);
-	$page_title = 'page-'.esc_html($q->post_title);
-	if ($page_title && function_exists('register_sidebar')){
-	register_sidebar(array(
-		'id' => $id,
-		'name' => $page_title ,
-		'before_widget' => '<div class="home-widget"><div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div></div>',
-		'before_title' => '<div class="widget-title">',
-		'after_title' => '</div>',
-	));
+	//Post Formats
+	add_theme_support( 'post-formats', array('video', 'aside', 'gallery', 'image'));
+
+	if ( function_exists('register_sidebar') ) {
+		$pageposts = get_posts(array('posts_per_page' => -1, 'post_type' => 'page', 'post_status' => 'publish', 'meta_query' => array(array('key' => '_wp_page_template', 'value' => 'alternative homepage.php')),));
+		foreach ( $pageposts as $q ){
+		$id = 'sidebar-'.esc_html($q->ID);
+		$page_title = 'page-'.esc_html($q->post_title);
+		if ($page_title && function_exists('register_sidebar')){
+		register_sidebar(array(
+			'id' => $id,
+			'name' => $page_title ,
+			'before_widget' => '<div class="home-widget"><div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div></div>',
+			'before_title' => '<div class="widget-title">',
+			'after_title' => '</div>',
+		));
+		}
+		}
 	}
-	}
-}
 }
 add_action( 'after_setup_theme', 'alternative_homepage' );
 
